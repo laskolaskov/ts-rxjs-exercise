@@ -1,7 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
-//const { interval, of, merge } = require('rxjs');
-//const { map, publish, zip, combineresult, takeUntil, buffer, window, scan, mergeAll } = require('rxjs/operators');
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -118,14 +116,6 @@ var PriceAggregator = /** @class */ (function () {
         }, {});
         return Object.values(priceSummary);
     };
-    /* getFeeds(): PriceFeed[] {
-        const arr: PriceFeed[] = []
-        for(let feed in this.priceFeeds) {
-            console.log(feed)
-            arr.push(feed.feed)
-        }
-        return arr
-    } */
     PriceAggregator.prototype.initPriceSummary = function (pf) {
         return {
             symbol: pf.symbol,
@@ -145,7 +135,6 @@ var PriceAggregator = /** @class */ (function () {
     return PriceAggregator;
 }());
 exports.PriceAggregator = PriceAggregator;
-//module.exports = PriceAggregator
 
 },{"rxjs":3,"rxjs/operators":201}],2:[function(require,module,exports){
 "use strict";

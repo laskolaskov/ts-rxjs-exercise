@@ -1,6 +1,4 @@
 "use strict";
-//const { interval, of, merge } = require('rxjs');
-//const { map, publish, zip, combineresult, takeUntil, buffer, window, scan, mergeAll } = require('rxjs/operators');
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -117,14 +115,6 @@ var PriceAggregator = /** @class */ (function () {
         }, {});
         return Object.values(priceSummary);
     };
-    /* getFeeds(): PriceFeed[] {
-        const arr: PriceFeed[] = []
-        for(let feed in this.priceFeeds) {
-            console.log(feed)
-            arr.push(feed.feed)
-        }
-        return arr
-    } */
     PriceAggregator.prototype.initPriceSummary = function (pf) {
         return {
             symbol: pf.symbol,
@@ -144,4 +134,3 @@ var PriceAggregator = /** @class */ (function () {
     return PriceAggregator;
 }());
 exports.PriceAggregator = PriceAggregator;
-//module.exports = PriceAggregator

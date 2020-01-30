@@ -1,6 +1,3 @@
-//const { interval, of, merge } = require('rxjs');
-//const { map, publish, zip, combineresult, takeUntil, buffer, window, scan, mergeAll } = require('rxjs/operators');
-
 import { interval, merge, ConnectableObservable, Observable, Subscription } from 'rxjs'
 import { map, publish, buffer } from 'rxjs/operators';
 
@@ -160,15 +157,6 @@ export class PriceAggregator {
         return Object.values(priceSummary)
     }
 
-    /* getFeeds(): PriceFeed[] {
-        const arr: PriceFeed[] = []
-        for(let feed in this.priceFeeds) {
-            console.log(feed)
-            arr.push(feed.feed)
-        }
-        return arr
-    } */
-
     initPriceSummary(pf) {
         return {
             symbol: pf.symbol,
@@ -186,5 +174,3 @@ export class PriceAggregator {
         }
     }
 }
-
-//module.exports = PriceAggregator
