@@ -1,0 +1,20 @@
+{
+    "include": [
+        "*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "*.js"
+    ],
+    "types": [
+        "node"
+    ],
+    "typeRoots": [
+        "node_modules/@types"
+    ],
+    "compilerOptions": {
+        "types": [
+            "node"
+        ]
+    }
+}
